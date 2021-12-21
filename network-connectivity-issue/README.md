@@ -86,3 +86,16 @@ These coincide with lag in the dashboard.
 The capture below is recorded while pressing `'a'` and recording the ping response times at the same time.
 
 ![screen-capture](screen-capture.gif)
+
+Sidenote: typing in the instance in Virginia feels in general more responsive (with the exception of the lag spikes mentioned above).
+This makes sense, because I imagine pressing a key causes the following sequence:
+
+1. 'a' is sent from my browser to the VPN.
+2. 'a' is sent from the VPN to the device.
+3. The terminal update is sent from the device to the VPN.
+4. The terminal update is sent from the VPN to my browser.
+
+With my local balena device, each of these items takes ~90msec, meaning it takes at least ~360msec before I see the character on my screen.
+With the device on AWS EC2 Virginia the delay between me and the VPN / device is still 90msec (items 1 and 4 above), but the delay between the device and the VPN is just a few milliseconds.
+That means that it now takes at least ~190msec (assuming ~5msec between VPN and device).
+Add to that the lag spikes and I think it can explain a large part of our network performance.
