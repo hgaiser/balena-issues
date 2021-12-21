@@ -17,3 +17,9 @@ This is the volume after purging:
 
 Note that after purging it can happen that `BASE_WAS_HERE` or `EXTENSION_WAS_HERE` is present in the volume, depending on the race condition.
 I have also noticed one time that both files were present in the volume, no clue how that happened.
+
+This can be fixed by running:
+
+```
+balena stop $(balena ps -aq) && balena container rm $(balena container ls -aq) && balena volume rm some-volume
+```
