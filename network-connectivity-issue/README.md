@@ -59,3 +59,30 @@ I have no clue why this connection seems so unstable.
 
 Are there VPN instances closer to Europe?
 Can these be configured somehow?
+
+## Running a device closer to the VPN
+
+I also tried running a device in AWS EC2 Virginia.
+Ping times are better, but still there are issues:
+
+```
+64 bytes from 52.4.252.97: seq=100 ttl=255 time=3.801 ms
+64 bytes from 52.4.252.97: seq=101 ttl=255 time=5.234 ms
+64 bytes from 52.4.252.97: seq=102 ttl=255 time=3.805 ms
+64 bytes from 52.4.252.97: seq=103 ttl=255 time=887.170 ms
+64 bytes from 52.4.252.97: seq=104 ttl=255 time=3.571 ms
+64 bytes from 52.4.252.97: seq=105 ttl=255 time=4.942 ms
+64 bytes from 52.4.252.97: seq=106 ttl=255 time=8.346 ms
+64 bytes from 52.4.252.97: seq=107 ttl=255 time=3.702 ms
+64 bytes from 52.4.252.97: seq=108 ttl=255 time=4.130 ms
+64 bytes from 52.4.252.97: seq=109 ttl=255 time=7.627 ms
+64 bytes from 52.4.252.97: seq=110 ttl=255 time=57.820 ms
+64 bytes from 52.4.252.97: seq=111 ttl=255 time=9.081 ms
+64 bytes from 52.4.252.97: seq=112 ttl=255 time=8.476 ms
+64 bytes from 52.4.252.97: seq=113 ttl=255 time=4.005 ms
+```
+
+These coincide with lag in the dashboard.
+The capture below is recorded while pressing `'a'` and recording the ping response times at the same time.
+
+![screen-capture](screen-capture.gif)
