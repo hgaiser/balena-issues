@@ -1,0 +1,23 @@
+version: '2'
+
+volumes:
+  some-volume:
+
+services:
+  config:
+    container_name: config
+    image: config
+    build:
+      context: config
+    volumes:
+      - 'some-volume:/mnt/some-volume'
+
+  some-service:
+    container_name: some-service
+    image: some-service
+    build:
+      context: some-service
+    volumes:
+      - 'some-volume:/mnt/some-volume'
+    depends_on:
+      - config
