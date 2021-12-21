@@ -1,0 +1,6 @@
+version: '2'
+
+services:
+  base:
+    container_name: foo
+    image: busybox:$BUSYBOX_VERSION

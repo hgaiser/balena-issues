@@ -1,0 +1,3 @@
+build-variables:
+  global:
+    - BUSYBOX_VERSION=latest
