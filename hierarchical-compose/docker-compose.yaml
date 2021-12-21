@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  base:
+    container_name: base
+    image: base
+    build:
+      context: base
+
+  extension:
+    container_name: extension
+    image: extension
+    build:
+      context: extension
