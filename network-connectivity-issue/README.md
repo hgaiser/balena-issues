@@ -95,7 +95,7 @@ This makes sense, because I imagine pressing a key causes the following sequence
 3. The terminal update is sent from the device to the VPN.
 4. The terminal update is sent from the VPN to my browser.
 
-With my local balena device, each of these items takes ~90msec, meaning it takes at least ~360msec before I see the character on my screen.
-With the device on AWS EC2 Virginia the delay between me and the VPN / device is still 90msec (items 1 and 4 above), but the delay between the device and the VPN is just a few milliseconds.
-That means that it now takes at least ~190msec (assuming ~5msec between VPN and device).
+With my local balena device, a roundtrip takes ~90msec, meaning it takes at least ~180msec before I see the character on my screen.
+With the device on AWS EC2 Virginia the delay between me and the VPN / device is still 45msec (items 1 and 4 above), but the delay between the device and the VPN is just a few milliseconds.
+That means that it now takes at least ~95msec (assuming ~5msec between VPN and device).
 Add to that the lag spikes and I think it can explain a large part of our network performance.
