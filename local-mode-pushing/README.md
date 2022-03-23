@@ -31,6 +31,12 @@ https://www.balena.io/docs/reference/balena-cli/#support-faq-and-troubleshooting
 
 Apparently `balena build` can **only** pull images from registries, it can't use local images.
 
+## `balena deploy`
+
+`balena deploy` pushes local images to balenaCloud, however `balena deploy` doesn't seem to have any support for local devices.
+Having this support would be ideal, since it means you can directly push images to balena devices running in local mode.
+Other solutions depend on a registry that needs to be setup.
+
 ## Pushing to VM
 
 1. Create a fleet on balenaCloud dashboard.
