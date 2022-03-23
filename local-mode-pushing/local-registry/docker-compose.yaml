@@ -1,0 +1,5 @@
+version: '2'
+
+services:
+  some-image:
+    image: 10.0.2.2:5000/hgaiser/some-image
